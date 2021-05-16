@@ -31,6 +31,45 @@
 
 <body>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBWqhFLmD2NMZiQwDEu75BizGEbC7TYJVU",
+    authDomain: "schoolhub-website.firebaseapp.com",
+    projectId: "schoolhub-website",
+    storageBucket: "schoolhub-website.appspot.com",
+    messagingSenderId: "336965220207",
+    appId: "1:336965220207:web:1556a5dfc6180d47e19a9a",
+    measurementId: "G-2PDXTZ43DF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  function writeData(){
+    firebase.database().ref("User").push({
+      email: document.getElementById("email").value,
+    });
+  }
+
+  var firebaseRef = firebase.database().ref('emails');
+
+  document.querySelector('#send').addEventListener('click', ()=>{
+    const email = document.getElementById('email').value;
+    firebaseRef.push(email);
+  });
+
+</script>
+
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top  header-transparent ">
     <div class="container d-flex align-items-center justify-content-between">
@@ -66,7 +105,7 @@
             </ul>
           </li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-          <li><a class="getstarted scrollto" href="#features">Register</a></li>
+          <li><a class="getstarted scrollto" href="https://o9c0ze7b739.typeform.com/to/TG2gH5Z1">Register</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -83,7 +122,7 @@
           <div>
             <h1>A Buddy to Help You in Your Study</h1>
             <h2>Download the SchoolHub App now and get all the features to make your student life an easy go and let all your school problem and stress vanish away.</h2>
-            <a href="#" class="download-btn"><i class="bx bxl-play-store"></i> Google Play</a>
+            <a href="https://play.google.com/store/apps/details?id=com.schaffen.lpchub" class="download-btn"><i class="bx bxl-play-store"></i> Google Play</a>
             <a href="#" class="download-btn"><i class="bx bxl-apple"></i> App Store</a>
           </div>
         </div>
@@ -221,18 +260,15 @@
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>Get guidance from board toppers for your examination preparation.</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              We brought you the board toppers around India to your phones who will be helping you and guiding you in your studies and preparation by giving their tips and tricks which was used by them for giving excellence performance in their examinations. 
             </p>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              Now forget about making your study plans or schedule and roaming around toppers to know their scret to score good marks. We bring all those tips and tricks to your on your phone.
             </p>
             <ul>
-              <li><i class="bi bi-check"></i> Et praesentium laboriosam architecto nam .</li>
-              <li><i class="bi bi-check"></i> Eius et voluptate. Enim earum tempore aliquid. Nobis et sunt consequatur. Aut repellat in numquam velit quo dignissimos et.</li>
-              <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+              <li><i class="bi bi-check"></i> Read successful stories of board toppers and achievers.</li>
+              <li><i class="bi bi-check"></i> Get to know about their tips, tricks and strategy for scoring good marks in board examination.</li>
+              <li><i class="bi bi-check"></i> Get access to private chatbox where you can clear all doubts with the toppers.</li>
             </ul>
           </div>
         </div>
@@ -425,46 +461,46 @@
         <div class="accordion-list">
           <ul>
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">How to get the login for Pre-Access of SchoolHub App? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                 <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  Click the register button on the Navigation bar to get forwarded to the registration from of the Schoolhub App. Fill the forma nd our technical support will be contacting you soon in 2-3 working days.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">What are the benefits of joining the SchoolHub Team? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  After joining the Schoolhub team we will be appointing you with a team which will be developing your group discussion skills, leadership skills, intership certificate and letter of recommendation.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Why can't I see the payment portal for the subscription? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  The App is still in its Pre-Access Version, therefore, we are giving everyone free Senior Subscription for free if you register right now. You can see the register button for pre-access of the app in the navigation bar.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">What is SchoolHub club? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                  Schaffen Softwares created a community students from all over India and named it as SchoolHub club. In this Club we provide free entry to club members in our events, workshops, guide them in their coding journey and provide them a technical mentor for weekly classes.  
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed">How can I give interview for SchoolHub App? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
                 <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                  If you want to give interview for our SchoolHub App then you can WhatsApp us at +91 99199-21160 or mail us at support@schaffensofts.in and our interview team will contact you in 2-3 working days.
                 </p>
               </div>
             </li>
@@ -539,87 +575,69 @@
       </div>
     </section>End Contact Section -->
 
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="text-center">
+          <h3>Join Our SchoolHub Team</h3>
+          <p> Become your School representative now on SchoolHub by joining our SchoolHub team. Get all the leadership skills and on-field knowledge with internship certificate and training of different fields or departments by our Managers.</p>
+          <a class="typeform-share button" href="https://form.typeform.com/to/JzjrrMVu?typeform-medium=embed-snippet" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#5777ba;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-size="100" target="_blank">Register</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+          <!-- <a class="cta-btn" href="#">Call To Action</a> -->
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+
   </main>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
 
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Appland</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <div class="footer-top">
+  
+        <div class="container">
+  
+          <div class="row  justify-content-center">
+            <div class="col-lg-6">
+              <h3>SchoolHub</h3>
+              <p>Subscribe to our newsletter to get news and articles related to SchoolHub and events or Workshop organized by Schaffen Softwares.</p>
             </div>
           </div>
 
+          <div class="row footer-newsletter justify-content-center">
+            <div class="col-lg-6">
+              <form action="https://o9c0ze7b739.typeform.com/to/JzjrrMVu" method="post">
+                <input type="email" name="email" placeholder="Enter your Email" id="email" ><input type="submit" id="send">
+              </form>
+            </div>
+          </div>
+  
+          <div class="social-links">
+            <a href="https://twitter.com/Schaffen_Softs" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.facebook.com/SchaffenSoftwares" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/schoolhub.apk/" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=+919919921160" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://www.youtube.com/channel/UCD9-qa6XFWn2Hz8U4DSgFvg" class="youtube"><i class="bx bxl-youtube"></i></a>
+            <a href="https://discord.gg/uUTUvk3" class="discord"><i class="bx bxl-discord"></i></a>
+            <a href="https://www.linkedin.com/company/schaffen-softwares" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+  
         </div>
       </div>
-    </div>
-
-    <div class="container py-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>SchoolHub</span></strong>. All Rights Reserved
+  
+      <div class="container footer-bottom clearfix">
+        <div class="copyright">
+          &copy; Copyright <strong><span>SchoolHub</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://schaffensofts.in/">Schaffen Softwares</a>
+        </div>
       </div>
-      <div class="credits">
-        Designed by <a href="https://schaffensofts.in/">Schaffen Softwares</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
